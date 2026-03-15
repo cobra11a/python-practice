@@ -76,7 +76,7 @@ class Dog(Animal):
         print("woof!")
 d=Dog()
 d.sleep()
-
+d.eat()
 
 
 
