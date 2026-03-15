@@ -29,7 +29,73 @@ os.system('cls')
 
 hour = 16
 
-if 5 <= hour <= 11:
-    print("Good Morning")
-elif 12 <= hour <= 17:
-    print("Good Afternoon")
+# if 5 <= hour <= 11:
+#     print("Good Morning")
+# elif 12 <= hour <= 17:
+#     print("Good Afternoon")
+
+# class Animal :
+#     def Dog (self):
+#         print("Dog is a animal")
+
+# a1=Animal()
+# a1.Dog()
+
+# class Car:
+#     def __init__(self, brand, color):
+#         self.brand = brand
+#         self.color = color
+        
+
+# c1 = Car("BMW", "Red")
+
+# print(c1.brand," , " , c1.color)
+
+
+
+class student:
+    def __init__(self, name , age: int):
+        self.name = name 
+        self.age = int(age) 
+     
+
+
+s1 = student ("Sudhanshu" , 23)
+print(s1.name , s1.age)
+
+
+class Animal:
+    def Dog(self):
+        print("bark")
+
+    def show(self):
+        print(("dasrk"))
+a1=Animal()
+a1.Dog()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
