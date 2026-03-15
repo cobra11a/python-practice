@@ -27,7 +27,7 @@ os.system('cls')
 # Good Afternoon
 # Greeting code has completed.
 
-hour = 16
+# hour = 16
 
 # if 5 <= hour <= 11:
 #     print("Good Morning")
@@ -53,25 +53,31 @@ hour = 16
 
 
 
-class student:
-    def __init__(self, name , age: int):
-        self.name = name 
-        self.age = int(age) 
+# class student:
+#     def __init__(self, name , age: int):
+#         self.name = name 
+#         self.age = int(age) 
      
 
 
-s1 = student ("Sudhanshu" , 23)
-print(s1.name , s1.age)
+# s1 = student ("Sudhanshu" , 23)
+# print(s1.name , s1.age)
 
+
+# Inheritance 
 
 class Animal:
-    def Dog(self):
-        print("bark")
+    def eat(self):
+        print("Eating ")
+    def sleep(self):
+        print("sleeping")
+class Dog(Animal):
+    def bark(self):
+        print("woof!")
+d=Dog()
+d.sleep()
 
-    def show(self):
-        print(("dasrk"))
-a1=Animal()
-a1.Dog()
+
 
 
 
