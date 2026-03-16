@@ -66,17 +66,33 @@ os.system('cls')
 
 # Inheritance 
 
-class Animal:
-    def eat(self):
-        print("Eating ")
-    def sleep(self):
-        print("sleeping")
-class Dog(Animal):
-    def bark(self):
-        print("woof!")
-d=Dog()
-d.sleep()
-d.eat()
+# class Animal:
+#     def eat(self):
+#         print("Eating ")
+#     def sleep(self):
+#         print("sleeping")
+# class Dog(Animal):
+#     def bark(self):
+#         print("woof!")
+# d=Dog()
+# d.sleep()
+# d.eat()
+
+
+
+class Book:
+    def __init__(self ,title,price):
+        self.title = title
+        self.price = price
+    
+    def show_details(self):
+        print("Book Title:" ,self.title)
+        print("Price" ,self.price)
+
+b1 = Book("Python Basics" , 500)
+b1.show_details()
+
+
 
 
 
