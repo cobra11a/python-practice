@@ -80,17 +80,31 @@ os.system('cls')
 
 
 
-class Book:
-    def __init__(self ,title,price):
-        self.title = title
-        self.price = price
+# class Book:
+#     def __init__(self ,title,price):
+#         self.title = title
+#         self.price = price
     
-    def show_details(self):
-        print("Book Title:" ,self.title)
-        print("Price" ,self.price)
+#     def show_details(self):
+#         print("Book Title:" ,self.title)
+#         print("Price" ,self.price)
 
-b1 = Book("Python Basics" , 500)
-b1.show_details()
+# b1 = Book("Python Basics" , 500)
+# b1.show_details()
+
+# Writing data using python
+
+file = open("practice.txt" ,"w")
+file.write("Hellloolo\n")
+file.close()
+
+with open("practice.txt" ,"w") as file :
+    file.write("Hello guys\n")
+    file.write("Hello guyyys")
+
+
+
+
 
 
 
