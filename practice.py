@@ -92,15 +92,75 @@ os.system('cls')
 # b1 = Book("Python Basics" , 500)
 # b1.show_details()
 
+# Read using python
+
+# with open ("practice.txt" , "r") as file :
+#     content = file.read()
+#     print(content)
+
 # Writing data using python
 
-file = open("practice.txt" ,"w")
-file.write("Hellloolo\n")
-file.close()
+# file = open("practice.txt" ,"w")
+# file.write("Hellloolo\n")
+# file.close()
 
-with open("practice.txt" ,"w") as file :
-    file.write("Hello guys\n")
-    file.write("Hello guyyys")
+# with open("practice.txt" ,"w") as file :
+#     file.write("Hello guys\n")
+#     file.write("Hello guyyys")
+
+
+# try and except 
+
+
+ItemsInCart = 0
+
+def add_to_cart(items_to_add):
+    global ItemsInCart
+
+    # Check negative items
+    if items_to_add < 0:
+        raise Exception("Cannot add a negative number of items.")
+    
+    # Check cart limit
+    if ItemsInCart + items_to_add > 5:
+        raise Exception("Cart limit exceeded.")
+    
+    # Add items
+    ItemsInCart = ItemsInCart + items_to_add
+    print(f"{items_to_add} items added. Total in cart: {ItemsInCart}")
+
+
+# Example usage
+try:
+    add_to_cart(-5)   # valid
+     # should raise exception
+except Exception as e:
+    print(e)
+
+
+
+TicketBooked = 0 
+ 
+def book_ticket(tickets_to_book):
+    global TicketBooked
+
+    if tickets_to_book <0 :
+        raise Exception("Cannot book negative tickets.")
+    
+    if  TicketBooked + tickets_to_book > 10 :
+        raise Exception("Booking limit exceeded.")
+    
+    
+    
+    
+try:
+    book_ticket(4)
+    book_ticket(-1)
+    book_ticket(8)
+
+except Exception as e:
+    print(e)
+
 
 
 
