@@ -1,5 +1,6 @@
 import os 
 import time
+from selenium.webdriver.support.ui import Select
 os.system('cls')
 
 
@@ -40,12 +41,45 @@ driver.maximize_window()
 # print(text)
 
 
-driver.get("https://demoqa.com/broken")
+# driver.get("https://demoqa.com/broken")
+# time.sleep(2)
+
+# driver.find_element(By.LINK_TEXT ,"Click Here for Valid Link").click()
+
+
+# **** Select class for static dropdown 
+
+# driver.get("https://rahulshettyacademy.com/dropdownsPractise")
+# dropdown = Select(driver.find_element (By.ID, "ctl00_mainContent_DropDownListCurrency")) # the whole dropdown box 
+
+# time.sleep(2)
+
+# dropdown.select_by_value("USD") # select USD 
+# dropdown.select_by_index("2") 
+# dropdown.select_by_visible_text("USD") 
+
+# print(dropdown.first_selected_option.text) # print message of selected option 
+
+
+# ****Autosuggestive drop down dynamically dropdown *****
+
+
+driver.get("https://rahulshettyacademy.com/dropdownsPractise")
+driver.find_element(By.ID ,"autosuggest").send_keys("Aus")
 time.sleep(2)
 
-driver.find_element(By.LINK_TEXT ,"Click Here for Valid Link").click()
+message = driver.find_elements(By.CSS_SELECTOR , "li[class ='ui-menu-item'] a ")
 
+print(len(message))
 
+for suggestion in message:
+    # print("Option:", suggestion.text)
+    # if suggestion.text == "Australia" :
+    #     suggestion.click()
+    #     break
+ if suggestion.text == "Australia":
+        suggestion.click()
+        break 
 
 
 
