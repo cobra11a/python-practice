@@ -64,22 +64,55 @@ driver.maximize_window()
 # ****Autosuggestive drop down dynamically dropdown *****
 
 
-driver.get("https://rahulshettyacademy.com/dropdownsPractise")
-driver.find_element(By.ID ,"autosuggest").send_keys("Aus")
-time.sleep(2)
+# driver.get("https://rahulshettyacademy.com/dropdownsPractise")
+# driver.find_element(By.ID ,"autosuggest").send_keys("Aus")
+# time.sleep(2)
 
-message = driver.find_elements(By.CSS_SELECTOR , "li[class ='ui-menu-item'] a ")
+# message = driver.find_elements(By.CSS_SELECTOR , "li[class ='ui-menu-item'] a ")
 
-print(len(message))
+# print(len(message))
 
-for suggestion in message:
-    # print("Option:", suggestion.text)
-    # if suggestion.text == "Australia" :
-    #     suggestion.click()
-    #     break
- if suggestion.text == "Australia":
-        suggestion.click()
-        break 
+# for suggestion in message:
+#     # print("Option:", suggestion.text)
+#     # if suggestion.text == "Australia" :
+#     #     suggestion.click()
+#     #     break
+#  if suggestion.text == "Australia":
+#         suggestion.click()
+#         break 
+
+
+#******Alert ********
+
+
+driver.get("https://demoqa.com/alerts")
+# driver.find_element(By.CSS_SELECTOR,"#alertButton").click()
+# time.sleep(2)
+
+# alert = driver.switch_to.alert
+# time.sleep(1)
+# alert.accept()
+
+# driver.find_element(By.CSS_SELECTOR , "#confirmButton").click()
+# time.sleep(2)
+# alert = driver.switch_to.alert
+# time.sleep(1)
+# message = alert.text
+# alert.accept()
+# print("message : ", message)
+
+
+driver.find_element(By.CSS_SELECTOR , "#promtButton").click()
+
+alert = driver.switch_to.alert
+print("Alert Text:", alert.text)
+alert.send_keys("Raj")
+message = alert.text
+alert.accept()
+print(message)
+
+
+
 
 
 
